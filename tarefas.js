@@ -18,3 +18,14 @@ function listarTarefas() {
 // Teste inicial
 adicionarTarefa("Estudar Git");
 listarTarefas();
+
+function removerTarefa(indice) {
+if (indice < 1 || indice > tarefas.length) {
+console.log("Indice invalido."); return;
+}
+let rem = tarefas.splice(indice - 1, 1);
+console.log("Removida: " + rem[0].descricao);
+}
+// Teste
+adicionarTarefa("Tarefa B");
+removerTarefa(1); listarTarefas();
